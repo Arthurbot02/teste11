@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("imagens/fundo.jpg"); /* Imagem de fundo com corações */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  background-color: rgba(
+    153,
+    67,
+    126,
+    0.8
+  ); /* Fundo branco semi-transparente */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.image-left,
+.image-right {
+  width: 20%;
+}
+
+.image-left img,
+.image-right img {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.content {
+  text-align: center;
+  width: 60%;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff4d8f;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row; /* Manter as imagens ao lado do texto */
+    text-align: center;
+  }
+
+  .image-left,
+  .image-right {
+    width: 25%; /* Menor largura para as imagens */
+    margin: 0 10px; /* Espaçamento entre as imagens */
+  }
+
+  .content {
+    width: 50%; /* Reduzir a largura do conteúdo */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Em telas muito pequenas, mudar para coluna */
+    align-items: center; /* Centralizar tudo */
+  }
+
+  .image-left,
+  .image-right {
+    width: 80%; /* Aumentar as imagens para ocupar mais espaço */
+    margin-bottom: 10px; /* Espaçamento inferior entre as imagens */
+  }
+
+  .content {
+    width: 80%; /* Tornar o conteúdo mais largo */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
