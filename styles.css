@@ -1,105 +1,69 @@
-* {
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("imagens/fundo.jpg"); /* Imagem de fundo com corações */
+  color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f8f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url("fundo.jpg"); /* Imagem de fundo com corações */
-  background-size: cover;
-  background-position: center;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
   max-width: 900px;
-  background-color: rgba(
-    153,
-    67,
-    126,
-    0.8
-  ); /* Fundo branco semi-transparente */
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.image-left,
-.image-right {
-  width: 20%;
-}
-
-.image-left img,
-.image-right img {
-  width: 70%;
-  border-radius: 10px;
-}
-
-.content {
+  margin: 0 auto;
+  padding: 30px 20px;
   text-align: center;
-  width: 60%;
 }
 
 h1 {
-  font-size: 2.5em;
-  color: #ff4d8f;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  color: #000000;
 }
 
-p {
-  font-size: 1.2em;
-  color: #333;
-  line-height: 1.5;
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: row; /* Manter as imagens ao lado do texto */
-    text-align: center;
-  }
-
-  .image-left,
-  .image-right {
-    width: 25%; /* Menor largura para as imagens */
-    margin: 0 10px; /* Espaçamento entre as imagens */
-  }
-
-  .content {
-    width: 50%; /* Reduzir a largura do conteúdo */
-  }
+.music-card {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 480px) {
-  .container {
-    flex-direction: column; /* Em telas muito pequenas, mudar para coluna */
-    align-items: center; /* Centralizar tudo */
-  }
+.music-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-  .image-left,
-  .image-right {
-    width: 80%; /* Aumentar as imagens para ocupar mais espaço */
-    margin-bottom: 10px; /* Espaçamento inferior entre as imagens */
-  }
+.music-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
 
-  .content {
-    width: 80%; /* Tornar o conteúdo mais largo */
-  }
+.music-card a {
+  color: #942a8f;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  h1 {
-    font-size: 2em;
-  }
+.music-card a:hover {
+  text-decoration: underline;
+}
 
-  p {
-    font-size: 1em;
-  }
+#continuarBtn {
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-size: 1em;
+  background-color: #e302ab;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#continuarBtn:hover {
+  background-color: #e302ab;
 }
