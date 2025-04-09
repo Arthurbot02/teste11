@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("imagens/fundo.jpg");
+  background-image: url("fundo.jpg");
   background-size: cover;
   background-position: center;
   padding: 20px; /* evita que o conteúdo encoste nas bordas em mobile */
