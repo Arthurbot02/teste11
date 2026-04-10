@@ -84,7 +84,7 @@ button {
 /* Botão São Paulo */
 #saopaulo {
   position: absolute;
-  right: 9%;
+  right: 5%;
   background: linear-gradient(135deg, #ff0000, #c40000);
   color: white;
 }
