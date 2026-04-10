@@ -1,100 +1,150 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo */
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f8f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  background-image: url("fundo.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 20px; /* evita que o conteúdo encoste nas bordas em mobile */
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
-  background-color: rgba(153, 67, 126, 0.8);
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex-wrap: wrap; /* importante para quebrar linhas em telas pequenas */
-}
-
-.image-left,
-.image-right {
-  flex: 1 1 100px;
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  align-items: center;
+  padding: 20px;
+  background: url("imagens/fundo.jpg") no-repeat center/cover;
 }
 
-.image-left img,
-.image-right img {
+/* Container com efeito de vidro */
+.container {
   width: 100%;
-  max-width: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.content {
-  flex: 2 1 300px;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(153, 67, 126, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   text-align: center;
-  padding: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Títulos */
 h1 {
-  font-size: 2.5em;
-  color: #ff4d8f;
+  font-size: 1.8rem;
+  color: #ff6fa5;
+  margin-bottom: 25px;
+}
+
+.quiz h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Área dos botões */
+.botoes {
+  position: relative;
+  width: 100%;
+  height: 80px;
   margin-bottom: 15px;
 }
 
-p {
-  font-size: 1.2em;
-  color: #fff;
-  line-height: 1.5;
+/* Botões */
+button {
+  border: none;
+  padding: 12px 22px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
-/* Telas até 768px */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-left,
-  .image-right,
-  .content {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .image-left img,
-  .image-right img {
-    max-width: 200px;
-  }
-
-  .content {
-    padding: 10px 20px;
-  }
+/* Botão Corinthians */
+#corinthians {
+  position: absolute;
+  left: 4%;
+  background: linear-gradient(135deg, #000000, #434343);
+  color: white;
 }
 
-/* Telas até 480px */
+/* Botão São Paulo */
+#saopaulo {
+  position: absolute;
+  right: 9%;
+  background: linear-gradient(135deg, #ff0000, #c40000);
+  color: white;
+}
+
+#saopaulo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+/* Mensagem */
+#resposta {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffe6f0;
+  min-height: 24px;
+}
+
+/* Botão Continuar */
+.continuar {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #ff6fa5, #ff4d8f);
+  color: white;
+  width: 100%;
+  max-width: 250px;
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-radius: 12px;
+}
+
+.continuar.ativo {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.continuar.ativo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+/* Responsividade */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 2em;
+  .container {
+    padding: 20px;
   }
 
-  p {
-    font-size: 1em;
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .quiz h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .botoes {
+    height: 100px;
   }
 }
