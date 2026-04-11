@@ -20,6 +20,10 @@ body {
   padding: 20px;
 }
 
+body {
+  background-color: red !important;
+}
+
 /* ============================= */
 /* CONTAINER PRINCIPAL */
 /* ============================= */
