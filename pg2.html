@@ -3,33 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Um Vídeo para Você ❤️</title>
+    <title>Nosso Vídeo ❤️</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="pg2.css" />
   </head>
+
   <body>
     <div class="container">
-      <div class="content">
-        <h1>Esse vídeo é para você! ❤️</h1>
-        <p>
-          Preparei algo especial para te lembrar o quanto você é importante para
-          mim.
-        </p>
+      <h1>Para o Amor da Minha Vida ❤️</h1>
+      <p>Preparei algo especial para você...</p>
 
-        <div class="video-container">
-          <video controls autoplay muted>
-            <source src="0409 (1).mp4" type="video/mp4" />
-            Seu navegador não suporta a reprodução de vídeo.
-          </video>
-        </div>
-
-        <button onclick="voltar()" class="btn">Voltar</button>
+      <!-- Vídeo do Google Drive -->
+      <div class="video-container">
+        <iframe
+          src="https://drive.google.com/file/d/12JwP0Uak-t9lMjAZfuiOn2l8vlCU7ljR/preview"
+          title="Nosso Vídeo"
+          allow="autoplay"
+          allowfullscreen
+        >
+        </iframe>
       </div>
-    </div>
 
-    <script>
-      function voltar() {
-        window.location.href = "pg1.html";
-      }
-    </script>
+      <p class="mensagem">
+        Eu te amo muito! Obrigado por fazer parte da minha vida. 💖
+      </p>
+
+      <!-- Botão para voltar -->
+      <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+    </div>
   </body>
 </html>
